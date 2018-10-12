@@ -4,8 +4,11 @@ import App from './App';
 import './index.css';
 import {HashRouter} from 'react-router-dom'; 
 import { Provider } from 'react-redux';
+import configureStore from './store/store';
 
-const Root = ({store}) => {
+const Root = () => {
+  const store = configureStore();
+
   return (
     <Provider store={store}>
       <HashRouter>
@@ -16,6 +19,7 @@ const Root = ({store}) => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(<Root store={store}/>, document.getElementById('root'))
+
+  ReactDOM.render(<Root/>, document.getElementById('root'))
 })
 

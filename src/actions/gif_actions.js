@@ -18,7 +18,7 @@ export const fetchGifs = (query) => dispatch => {
   // conver array to obj for faster read time later
 
   return APIUtil.apiFetchGifs(query).then( response => {
-    console.log(response);
+
     const dataObj = {};
     response.data.data.forEach( gif => dataObj[gif.id] = gif );
     return dispatch(receiveAllGifs(dataObj));
@@ -27,7 +27,8 @@ export const fetchGifs = (query) => dispatch => {
 
 export const fetchGif = gif_id => dispatch => {
   return APIUtil.apiFetchGif(gif_id).then( response => {
-    const dataObj = {[response.data.data.id]: gifObj};
+    const gifObj = response.data.data;
+    const dataObj = {[gifObj.id]: gifObj};
     return dispatch(receiveGif(dataObj));
   })
 }
