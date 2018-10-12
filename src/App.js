@@ -11,7 +11,7 @@ class App extends Component {
 
           <Switch>
             <Route exact path="/gifs" component={IndexGifs} />
-            <Route path="/" component = {SplashSearch} />
+            <Route path="/" component={SplashSearch} />
           </Switch>
 
       </div>

@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 
 const Root = ({store}) => {
   return (
-    <Provider store = {store}>
+    <Provider store={store}>
       <HashRouter>
         <App />
       </HashRouter>
@@ -16,6 +16,6 @@ const Root = ({store}) => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(<Root store = {store}/>, document.getElementById('root'))
+  ReactDOM.render(<Root store={store}/>, document.getElementById('root'))
 })
 
