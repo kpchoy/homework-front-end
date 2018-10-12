@@ -5,11 +5,23 @@ class IndexGifs extends React.Component {
   constructor(props) {
     super(props);
 
+    this.handleSearch = this.handleSearch.bind(this); 
+    this.handleSelectGif = this.handleSelectGif.bind(this);
   }
 
   componentDidMount() {
     const { query } = this.props.match.params;
     this.props.fetchGifs(query);
+  }
+
+  handleSearch() {
+
+    this.props.history.push('/');
+  }
+
+  handleSelectGif(e) {
+    e.preventDefault();
+    this.props.history.push(`/gif/${e.target.id}`);
   }
 
   render() {
@@ -29,8 +41,10 @@ class IndexGifs extends React.Component {
         className="gif-item"
         src={gif.images.fixed_width.webp}
         id={gif.id}
+        onClick={this.handleSelectGif}
         />
       );
+
     }); 
 
     if(gifs.length === 0) {
@@ -39,11 +53,14 @@ class IndexGifs extends React.Component {
       )
     }
 
+    let topic = this.props.match.params.query; 
+
     return (
       <div>
-        <h1>
-        Index Gifs  
-        </h1>
+        <h1>{topic} Gifs</h1>
+
+        <button className="search-again" onClick={() => this.handleSearch()}>Search for more Gifs!</button>
+
         <div>
           {gifs}
         </div>

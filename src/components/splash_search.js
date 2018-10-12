@@ -11,6 +11,7 @@ class SplashSearch extends React.Component {
   }
 
   handleSubmit(e) {
+
     e.preventDefault();
     this.props.history.push(`/search/${this.state.query}`);
   }

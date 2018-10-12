@@ -7,7 +7,7 @@ const gifReducer = (state = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_ALL_GIFS:
-      return merge({}, state, {gifs:action.gifs})
+      return {gifs:action.gifs};
     case RECEIVE_GIF:
       return {gif: action.gif};
     default:
