@@ -1,9 +1,8 @@
 import axios from 'axios';
 import apiKey from '../../api-keys';
 
-console.log(apiKey.apikey)
 
-// Search Api endpoint 
+// Search Api endpoint
 
 export const apiFetchGifs = (query) => {
   return axios.get('http://api.giphy.com/v1/gifs/search', {
