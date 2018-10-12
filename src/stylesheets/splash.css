@@ -1,0 +1,25 @@
+
+.splash {
+  vertical-align: center;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.logo{
+  height: 400px;
+}
+
+.splash-header > h1 {
+  margin-top: 2%;
+  font-size: 20px; 
+}
+
+.search-form {
+  margin-top: 2%;
+  font-size: 20px;
+}
+
+.search-button {
+  margin-left: 10px;
+  font-size: 20px; 
+}

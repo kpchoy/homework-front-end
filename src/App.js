@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Switch, Link, Route} from 'react-router-dom';
-import './App.css';
+import './stylesheets/App.css';
 import SplashSearch from './components/splash_search';
 import IndexGifsContainer from './components/index/index_gifs_container';
 import ShowGifContainer from './components/show/show_gif_container';

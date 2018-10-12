@@ -10,7 +10,8 @@ class ShowGif extends React.Component {
       url: "----",
       importDate: "----",
       rating: "----",
-      gifImg: "----"
+      gifImg: "----",
+
     }
 
     this.handleReturn = this.handleReturn.bind(this);
@@ -29,7 +30,9 @@ class ShowGif extends React.Component {
       url: nextProps.gif.url,
       importDate: nextProps.gif.import_datetime,
       rating: nextProps.gif.rating,
-      gifImg: nextProps.gif.images.downsized_large.url
+      gifImg: nextProps.gif.images.downsized_large.url,
+     
+
     })
   }
 
@@ -45,7 +48,7 @@ class ShowGif extends React.Component {
       )
     } else {
       return(
-        <img src={this.state.gifImg}/>
+        <img className="gif-image" src={this.state.gifImg}/>
       )
     }
   }
@@ -61,15 +64,21 @@ class ShowGif extends React.Component {
     }
 
     return(
-      <div>
-        {this.renderDisplay()}
+      <div className="gif-show">
+        <h1>Gif Details</h1>
+        <div className="gif-items">
 
-        <h1>Selected Gif</h1>
-        <p>title: {this.state.title}</p>
-        <p>id: {this.state.id}</p>
-        <p>url: {this.state.url}</p>
-        <p>importDate: {this.state.importDate}</p>
-        <p>rating: {this.state.rating}</p>
+          {this.renderDisplay()}
+          
+          <div className="gif-description">
+            <p>Title: {this.state.title}</p>
+            <p>Id: {this.state.id}</p>
+            <p>Url: {this.state.url}</p>
+            <p>Import Date: {this.state.importDate}</p>
+            <p>Rating: {this.state.rating}</p>
+          </div>
+        </div>
+
 
         <button className="index-return" onClick={() => this.handleReturn()}>Return to Search</button>
       </div>

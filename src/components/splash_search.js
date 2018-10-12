@@ -24,8 +24,8 @@ class SplashSearch extends React.Component {
     return (
       <div className="splash">
         <div className="splash-header">
-          <img className="logo" src="../../assets/giphy_icon.jpg" />
-          <h1>GIPHY </h1>
+          <img className="logo" src="https://media.giphy.com/media/YJBNjrvG5Ctmo/giphy.gif" />
+          <h1>Search For Trending Gifs!</h1>
         </div>
 
         <form onSubmit={this.handleSubmit}>
@@ -33,7 +33,7 @@ class SplashSearch extends React.Component {
             className="search-form"
             onChange={this.update}
             value={this.state.query}
-            placeholder="Search for trending Gifs!"
+            placeholder="Search!"
           />
           <button className="search-button">Search</button>
         </form>

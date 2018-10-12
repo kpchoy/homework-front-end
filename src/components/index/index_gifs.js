@@ -56,12 +56,12 @@ class IndexGifs extends React.Component {
     let topic = this.props.match.params.query; 
 
     return (
-      <div>
+      <div className="index">
         <h1>{topic} Gifs</h1>
 
         <button className="search-again" onClick={() => this.handleSearch()}>Search for more Gifs!</button>
 
-        <div>
+        <div className="index-gifs">
           {gifs}
         </div>
       </div>

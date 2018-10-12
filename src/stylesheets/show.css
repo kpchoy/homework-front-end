@@ -1,0 +1,39 @@
+.gif-show {
+  vertical-align: center;
+  text-align: center;
+  margin-top: 10%;
+
+}
+
+.gif-show > h1 {
+  font-size: 35px;
+  margin-bottom: 2%;
+}
+
+.gif-items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.gif-description {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.gif-description > p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.gif-image {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.index-return {
+  margin-top: 20px;
+  font-size: 20px; 
+}
