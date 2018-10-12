@@ -21,7 +21,7 @@ class IndexGifs extends React.Component {
 
   handleSelectGif(e) {
     e.preventDefault();
-    this.props.history.push(`/gif/${e.target.id}`);
+    this.props.history.push(`/show/${e.target.id}`);
   }
 
   render() {

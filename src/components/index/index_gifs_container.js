@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import {fetchGifs, fetchGif} from '../../actions/gif_actions';
+import {fetchGifs} from '../../actions/gif_actions';
 import IndexGifs from './index_gifs';
 
 const mapStateToProps = state => {
@@ -10,8 +10,8 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchGifs: (query) => dispatch(fetchGifs(query)),
-  fetchGif: (gifId) => dispatch(fetchGif(gifId))
+  fetchGifs: (query) => dispatch(fetchGifs(query))
+
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(IndexGifs);
