@@ -12,6 +12,8 @@ class ShowGif extends React.Component {
       rating: "----",
       gifImg: "----"
     }
+
+    this.handleReturn = this.handleReturn.bind(this);
   }
 
   componentDidMount() {
@@ -31,6 +33,23 @@ class ShowGif extends React.Component {
     })
   }
 
+  handleReturn() {
+    window.history.back();
+  }
+
+  renderDisplay() {
+     
+    if (this.state.gifImg === "----") {
+      return(
+        <p>Loading Gif Image</p>
+      )
+    } else {
+      return(
+        <img src={this.state.gifImg}/>
+      )
+    }
+  }
+
   render() {     
 
     const {gif} = this.props 
@@ -41,11 +60,9 @@ class ShowGif extends React.Component {
       )
     }
 
-    
-
     return(
       <div>
-
+        {this.renderDisplay()}
 
         <h1>Selected Gif</h1>
         <p>title: {this.state.title}</p>
@@ -54,7 +71,7 @@ class ShowGif extends React.Component {
         <p>importDate: {this.state.importDate}</p>
         <p>rating: {this.state.rating}</p>
 
-
+        <button className="index-return" onClick={() => this.handleReturn()}>Return to Search</button>
       </div>
     )
   }
